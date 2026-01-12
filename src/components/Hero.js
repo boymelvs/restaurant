@@ -1,4 +1,4 @@
-const Hero = (props, context) => {
+const Hero = (props, { RouteManager }) => {
      return {
           section: {
                className: "hero-section",
@@ -57,17 +57,19 @@ const Hero = (props, context) => {
                                              className: "hero-ctas",
                                              children: [
                                                   {
-                                                       button: {
+                                                       a: {
+                                                            href: "#menu",
                                                             className: "btn view-menu-btn",
                                                             text: "View Menu",
-                                                            onclick: () => document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" }),
+                                                            onClick: () => RouteManager.navigate("#menu"),
                                                        },
                                                   },
                                                   {
-                                                       button: {
+                                                       a: {
+                                                            href: "#contact",
                                                             className: "btn contact-btn",
                                                             text: "Contact Us",
-                                                            onclick: () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }),
+                                                            onClick: () => RouteManager.navigate("#contact"),
                                                        },
                                                   },
                                              ],
