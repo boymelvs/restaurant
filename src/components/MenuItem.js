@@ -53,19 +53,20 @@ const MenuItem = (props, context) => {
                                                                            text: name,
                                                                       },
                                                                  },
+
                                                                  {
-                                                                      p: {
-                                                                           className: "menu-item-description",
-                                                                           text: description,
+                                                                      span: {
+                                                                           className: "menu-item-price",
+                                                                           text: () => `₱${price}`,
                                                                       },
                                                                  },
                                                             ],
                                                        },
                                                   },
                                                   {
-                                                       span: {
-                                                            className: "menu-item-price",
-                                                            text: () => `₱${price}`,
+                                                       p: {
+                                                            className: "menu-item-description",
+                                                            text: description,
                                                        },
                                                   },
                                              ],

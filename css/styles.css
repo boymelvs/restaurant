@@ -390,12 +390,14 @@ h6 {
 
 .menu-content {
      display: flex;
-     justify-content: space-between;
-     align-items: flex-start;
+     flex-direction: column;
      padding: 2rem 0;
 }
 
 .menu-item-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
      flex: 1;
 }
 
